@@ -65,5 +65,10 @@ namespace DirSearchClient_Desktop
                 return interopHelper.Handle;
             }
         }
+
+        private void ClearAllCacheButton_Clicked(object sender, RoutedEventArgs e)
+        {
+            TokenCache.DefaultShared.Clear();
+        }
     }
 }

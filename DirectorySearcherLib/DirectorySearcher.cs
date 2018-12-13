@@ -14,9 +14,9 @@ namespace DirectorySearcherLib
 {
     public static class DirectorySearcher
     {
-        public static string clientId = "8313f713-eaf3-499c-ac75-516592f38d5f";
+        public static string clientId = "a2a37b98-05f9-4151-9f27-ce4af72673b5";
         public static string commonAuthority = "https://login.microsoftonline.com/common/";
-        public static Uri returnUri = new Uri("https://MyDirectorySearcherApp");        
+        public static Uri returnUri = new Uri("https://jeferrie.onmicrosoft.com/MyDirectorySearcherApp");        
         const string graphResourceUri = "https://graph.microsoft.com";
 
         public static async Task<List<User>> SearchByAlias(string alias, IPlatformParameters parent) // add this param

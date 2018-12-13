@@ -25,9 +25,11 @@ namespace DirSearchClient_Universal
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public Uri RedirectUri { get; set;}
         public MainPage()
         {
             this.InitializeComponent();
+            //RedirectUri = new Uri("ms-app://s-1-15-2-2700481181-3910835685-1436790065-180640025-1210051726-2354001432-3712066524/");
             List<User> results = new List<User>();
             results.Add(new User());
             SearchResults.ItemsSource = results;
@@ -62,6 +64,11 @@ namespace DirSearchClient_Universal
             }
 
             SearchResults.ItemsSource = results;
+        }
+
+        private void Clear_Cache_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

@@ -19,8 +19,7 @@ namespace DirSearchClient_Android
         {
             base.OnActivityResult(requestCode, resultCode, data);
             AuthenticationAgentContinuationHelper.SetAuthenticationAgentContinuationEventArgs(requestCode, resultCode, data);
-        }
-        
+        }        
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -32,6 +31,10 @@ namespace DirSearchClient_Android
             // Get our button from the layout resource,
             // and attach an event to it
             Button button = FindViewById<Button>(Resource.Id.searchButton);
+
+            Button clearCacheButton = FindViewById<Button>(Resource.Id.searchButton);
+
+           
 
             button.Click += async delegate {
 
@@ -80,6 +83,7 @@ namespace DirSearchClient_Android
                     surnameResult.SetText(results[0].surname, TextView.BufferType.Normal);
                     upnResult.SetText(results[0].userPrincipalName, TextView.BufferType.Normal);
                     phoneResult.SetText(results[0].telephoneNumber, TextView.BufferType.Normal);
+                    clearCacheButton.Click += delegate { TokenCache.DefaultShared.Clear(); };
                 }
             };
         }

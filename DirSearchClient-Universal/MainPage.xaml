@@ -37,6 +37,7 @@
                 <Button Grid.Column="1" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="search" Click="Search" Width="100">Search</Button>
             </Grid>
             <TextBlock x:Name="StatusResult" Grid.Row="1" FontSize="20" TextWrapping="Wrap" Margin="10" HorizontalAlignment="Center" Foreground="Green" />
+            <Button x:Name="Clear_Cache" Content="ClearCache" HorizontalAlignment="Left" Height="39" Margin="1256,1,0,0" Grid.Row="1" VerticalAlignment="Top" Width="194" Click="Clear_Cache_Click"/>
         </Grid>
 
         <!--Search Results-->

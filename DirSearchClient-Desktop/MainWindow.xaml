@@ -51,5 +51,6 @@
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>
+        <Button Content="Delete Cache" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Margin="860,77,0,0" Click="ClearAllCacheButton_Clicked"/>
     </Grid>
 </Window>
